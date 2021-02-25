@@ -6,8 +6,11 @@ layout: base.njk
 <div class="container">
     <h1>This is the start</h1>
     <ul>
-        <li>First element</li>
-        <li>Second element</li>
+        {% for article in news.articles %}
+            <li>
+                <h4>{{article.title.slice(0,35)}}...</h4>
+            </li>
+        {% endfor %}
     </ul>
     <p>
         This is a beautiful message :
